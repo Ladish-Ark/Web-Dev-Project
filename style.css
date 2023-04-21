@@ -1,6 +1,30 @@
-
-
 h1 {
     text-align: center;
     text-decoration: underline;
 }
+
+.row {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .columns {
+    width: 33%;
+    min-width: 280px;
+    vertical-align: top;/*Fix for different     height elements*/
+    margin-bottom: 10px;
+    display: inline-block;
+    background-color: #645f5c;
+    color: #fff;
+   }
+
+  .align-right {
+    text-align: right;
+  }
+
+  @media screen and (max-width: 680px) {
+    .columns {
+      width: 100%; 
+    }
+
+  }
