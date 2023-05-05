@@ -16,11 +16,19 @@ h1 {
     display: inline-block;
     background-color: #645f5c;
     color: #fff;
+    cursor: pointer;
    }
 
   .align-right {
     text-align: right;
   }
+
+  a.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
 
   @media screen and (max-width: 680px) {
     .columns {
