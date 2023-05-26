@@ -3,16 +3,7 @@
     <head>
         <title>Movies</title>
         <link rel="stylesheet" type="text/css" href="style.css" />
-<<<<<<< Updated upstream
-    </head>
-    <body>
-        <h1>Movies</h1>
-        <p>Welcome to my Movies page.</p>
-    </body>
-</html>
-=======
         <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
-
     </head>
     <body>
         <header>
@@ -22,7 +13,12 @@
         <p>Welcome to my Movies page.</p><br><br>
 
         <a href="https://letterboxd.com/ladish"><h2>Letterboxd</h2></a>
-        <p>Here you can find my letterboxd account with all my watched and reviews movies on :]</p><br>
+        <p>Here you can find my letterboxd account with all my watched and reviewed movies on :]</p><br>
+
+        <input type="text" id="search-date" placeholder="Search by date...">
+        <input type="text" id="search-title" placeholder="Search by title...">
+        <input type="text" id="search-rating" placeholder="Search by rating...">
+        <br><br>
 
         <table id="movie-table">
           <thead>
@@ -38,6 +34,6 @@
           </tbody>
         </table>
         <script src="movies.js"></script>
+        <script src="movie-search.js"></script>
     </body>
 </html>
->>>>>>> Stashed changes
