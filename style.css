@@ -51,11 +51,12 @@ h1 {
     width: 33%;
     min-width: 280px;
     vertical-align: top;/*Fix for different     height elements*/
-    margin-bottom: 10px;
     display: inline-block;
     background-color: #645f5c;
     color: #fff;
     cursor: pointer;
+    margin-bottom: 20px;
+    margin-right: 20px;
    }
 
   .align-right {
@@ -96,5 +97,12 @@ h1 {
   .active-page {
     background-color: #333;
     color: #fff;
+  }
+
+  .columns img {
+    width: 100px;
+    height: 150px;
+    border: 3px solid #e36cf8;
+    float: left;
   }
   
