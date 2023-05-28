@@ -16,10 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error(error);
     });
 
-
-
-
-    
   function fetchMoviesData() {
     return new Promise((resolve, reject) => {
       fetch("/Movie-Data/")
@@ -62,9 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-
-
-
   function renderMovies(page) {
     const startIndex = (page - 1) * moviesPerPage;
     const endIndex = startIndex + moviesPerPage;
@@ -103,18 +96,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-
-
-
-
   function renderPagination() {
     const totalPages = Math.ceil(moviesData.length / moviesPerPage);
-    const paginationContainer = document.getElementById("pagination");
+    const paginationContainer = document.getElementById("pagination-container");
 
     paginationContainer.innerHTML = ""; // Clear existing pagination
 
-    const previousButton = document.createElement("a");
-    previousButton.href = "#";
+    const previousButton = document.createElement("button");
     previousButton.textContent = "Previous";
     previousButton.addEventListener("click", function () {
       if (currentPage > 1) {
@@ -124,8 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    const nextButton = document.createElement("a");
-    nextButton.href = "#";
+    const nextButton = document.createElement("button");
     nextButton.textContent = "Next";
     nextButton.addEventListener("click", function () {
       if (currentPage < totalPages) {
@@ -137,25 +124,52 @@ document.addEventListener("DOMContentLoaded", function () {
 
     paginationContainer.appendChild(previousButton);
 
-    for (let i = 1; i <= totalPages; i++) {
-      const pageLink = document.createElement("a");
-      pageLink.href = "#";
-      pageLink.textContent = i;
+    const displayedPages = calculateDisplayedPages(totalPages, currentPage);
 
-      if (i === currentPage) {
-        pageLink.classList.add("active");
+    displayedPages.forEach((page) => {
+      const pageLink = document.createElement("button");
+      pageLink.textContent = page;
+
+      if (page === currentPage) {
+        pageLink.classList.add("active-page");
       }
 
       pageLink.addEventListener("click", function () {
-        currentPage = i;
+        currentPage = page;
         renderMovies(currentPage);
         renderPagination();
       });
 
       paginationContainer.appendChild(pageLink);
-    }
+    });
 
     paginationContainer.appendChild(nextButton);
+  }
+
+  function calculateDisplayedPages(totalPages, currentPage) {
+    const maxDisplayedPages = 5; // Maximum number of pages to display in the pagination
+
+    let displayedPages = [];
+
+    if (totalPages <= maxDisplayedPages) {
+      displayedPages = Array.from({ length: totalPages }, (_, i) => i + 1);
+    } else {
+      const middleIndex = Math.floor(maxDisplayedPages / 2);
+      let startPage = currentPage - middleIndex;
+      let endPage = currentPage + middleIndex;
+
+      if (startPage < 1) {
+        startPage = 1;
+        endPage = maxDisplayedPages;
+      } else if (endPage > totalPages) {
+        endPage = totalPages;
+        startPage = totalPages - maxDisplayedPages + 1;
+      }
+
+      displayedPages = Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i);
+    }
+
+    return displayedPages;
   }
 
   const inputTitle = document.getElementById("search-title");
