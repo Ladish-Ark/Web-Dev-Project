@@ -8,6 +8,11 @@ h1 {
     text-decoration: underline;
 }
 
+h3 {
+    text-align: center;
+    text-decoration: underline;
+}
+
 /* Header/Blog Title */
 .header {
   padding: 30px;
@@ -55,15 +60,14 @@ h1 {
     display: inline-block;
     background-color: #645f5c;
     color: #fff;
-    cursor: pointer;
     margin-bottom: 20px;
     margin-right: 20px;
     border-radius: 10px;
    }
 
    .columns img {
-    width: 100px;
-    height: 150px;
+    width: 200px;
+    height: 300px;
     border: 3px solid #000000;
     float: left;
     border-radius: 10px 0px 0px 10px;
