@@ -242,13 +242,13 @@ h3 {
         #ff9da7 95.3%,
         #9c755f 0,
         #9c755f 99.8%
-    );
+      );
     position: relative;
-    width: 700px;
-    min-height: 350px;
-    margin: 0;
+    width: 100%;
+    padding-bottom: 50%; /* Maintain an aspect ratio of 2:1 */
+    max-width: 700px;
   }
-
+  
   .pie-chart figcaption {
     position: absolute;
     bottom: 1em;
@@ -256,14 +256,14 @@ h3 {
     font-size: smaller;
     text-align: right;
   }
-
+  
   .pie-chart span:after {
     display: inline-block;
     content: "";
     width: 0.8em;
     height: 0.8em;
     margin-left: 0.4em;
-    height: 0.8em;
     border-radius: 0.2em;
     background: currentColor;
   }
+  
