@@ -212,4 +212,58 @@ h3 {
     text-decoration: none;
     white-space: normal;
   }
-  
+
+  .pie-chart {
+    background:
+      radial-gradient(
+        circle closest-side,
+        #3d3c3c 0,
+        #3d3c3c 69%,
+        transparent 69%,
+        transparent 100%,
+        #3d3c3c 0
+      ),
+      conic-gradient(
+        #4e79a7 0,
+        #4e79a7 31.8%,
+        #f28e2c 0,
+        #f28e2c 54.5%,
+        #e15759 0,
+        #e15759 63.6%,
+        #76b7b2 0,
+        #76b7b2 72.7%,
+        #59a14f 0,
+        #59a14f 81.8%,
+        #edc949 0,
+        #edc949 86.3%,
+        #af7aa1 0,
+        #af7aa1 90.8%,
+        #ff9da7 0,
+        #ff9da7 95.3%,
+        #9c755f 0,
+        #9c755f 99.8%
+    );
+    position: relative;
+    width: 700px;
+    min-height: 350px;
+    margin: 0;
+  }
+
+  .pie-chart figcaption {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    font-size: smaller;
+    text-align: right;
+  }
+
+  .pie-chart span:after {
+    display: inline-block;
+    content: "";
+    width: 0.8em;
+    height: 0.8em;
+    margin-left: 0.4em;
+    height: 0.8em;
+    border-radius: 0.2em;
+    background: currentColor;
+  }
