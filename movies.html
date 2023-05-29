@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    <head> <!-- Title of webpage at the top and it also links the file to the styling file. Another thing is that it runs a script to handle my csv that is used for the movie list -->
         <title>Movies</title>
         <link rel="stylesheet" type="text/css" href="style.css" />
         <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
     </head>
     <body>
+        <!-- This is the header to the part that is ontop of my navbar to tell the user what page they are currently on a tiny bit of info about it -->
         <div class="header">
           <h1>Movies</h1>
           <p>Welcome to my Movies page.</p>
         </div>
         
+        <!-- This is the navbar that is on every page and it allows the user to navigate to any page on the website -->
         <div class="topnav">
           <a href="index.html">Home</a>
           <a href="movies.html">Movies</a>
@@ -18,14 +20,18 @@
           <a href="games.html">Games</a>
         </div><br><br>  
 
-        <a href="https://letterboxd.com/ladish"><h2>Letterboxd</h2></a>
-        <p>Here you can find my letterboxd account with all my watched and reviewed movies on :]</p><br>
+        <!-- This is the main part of the page and it contains all the information about the movies I have watched and reviewed -->
 
+        <a href="https://letterboxd.com/ladish"><h2>Letterboxd</h2></a> <!-- This is a link to my letterboxd account -->
+        <p>Here you can find my letterboxd account with all my watched and reviewed movies on :]</p><br> <!-- This is a bit of info about my letterboxd account and what it is -->
+
+        <!-- This is the search bar that allows the user to search for a movie by date, title or rating -->
         <input type="text" id="search-date" placeholder="Search by date...">
         <input type="text" id="search-title" placeholder="Search by title...">
         <input type="text" id="search-rating" placeholder="Search by rating...">
         <br><br>
 
+        <!-- This is the table that contains all the movies and their information -->
         <table id="movie-table">
           <thead>
             <tr>
@@ -36,17 +42,21 @@
               <th>Letterboxd Link</th>
             </tr>
           </thead>
-          <tbody id="movies">
+          <tbody id="movies"> <!-- This is the body of the table and it is where all the movies are displayed and is grabbed and inserted by the js script this page also runs for the data proccessing -->
           </tbody>
         </table><br>
         
+        <!-- This is the pagination buttons that allow the user to navigate through the table -->
         <div id="pagination-container">
           <button id="prev-button">Previous</button>
           <button id="next-button">Next</button>
         </div>
       </div><br><br>
         
+        <!-- This is a script that is run and is used to grab the csv file and import it into the table. Its also make the pages work and the ability for users to search work -->
         <script src="movies.js"></script>
+      
+      <!-- This is the footer of the page and it contains the author of the page -->
       <footer>
         <p>Author: Ladish</p>
       </footer>
