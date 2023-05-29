@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    <head> <!-- This is where the title of the page is set for the tab and styling is imported for use on the site -->
         <title>Music</title>
         <link rel="stylesheet" type="text/css" href="style.css" />
     </head>
     <body>
+  
+          <!-- This is the header to the part that is ontop of my navbar to tell the user what page they are currently on a tiny bit of info about it -->
       <div class="header">
           <h1>Music</h1>
           <p>Welcome to my Music page.</p>
         </div>
-          
+        
+        <!-- This is the navbar that is on every page and it allows the user to navigate to any page on the website -->
         <div class="topnav">
           <a href="index.html">Home</a>
           <a href="movies.html">Movies</a>
@@ -17,6 +20,8 @@
           <a href="games.html">Games</a>
         </div><br>
 
+        <!-- This is the main part of the page and it contains all the information about the music I listen to and stats about it -->
+        <!-- This has a bit of info about me and my music intrest -->
         <p>
           Im a huge music listener and listen to a lot of different types of music. I always have music playing whenever I get the chance. I am mostly a fan of Rap and Pop.
           <br>I have tons of playlists on Spotify and I am always adding to them. My playlists can get a bit crazy as I never organise them and just keep adding songs to them. This ends up
@@ -26,20 +31,21 @@
         </p>
         <br><br>
 
+        <!-- This is the table that contains all the stats about my spotify account it is put in a row and then 3 columns to make it all look nice and neat -->
         <div class="row">
-          <div class="music-table-container">
+          <div class="music-table-container"> <!-- This is the table that contains the stats about my spotify account -->
 
-            <div class="music-table">
+            <div class="music-table"> <!-- This is the table that contains the stats about my top songs -->
               <h2>Top Tracks</h2>
               <table>
-                <thead>
+                <thead> <!-- This is the header of the table to show what each column means -->
                   <tr>
                     <th>Order</th>
                     <th>Song Name</th>
                     <th>Artist</th>
                   </tr>
                 </thead>
-              <tbody>
+              <tbody> <!-- This is where all the data is inserted into the table-->
                 <tr>
                   <td>1</td>
                   <td>She's Casual</td>
@@ -145,15 +151,16 @@
               </table>
             </div>
 
-            <div class="music-table">
+            <div class="music-table"> <!-- This is the second column and contains my top artists with their names and a nice picture of them that you can click -->
               <h2>Top Artists</h2>
-              <div class="person-container">
-                <div class="person">
+              <div class="person-container">  <!-- This is the container for the row which I will insert 3 people into -->
+                <div class="person"> <!-- This specifies that there is a element u want to add to the row e.g person -->
                   <a href="https://open.spotify.com/artist/4MCBfE4596Uoi2O4DtmEMz">
                   <img src="images/music/juice-wrld.jpg" alt="Picture of Juice WRLD"></a>
                   <h3>1. Juice WRLD</h3>
                 </div>
                 <div class="person">
+                  <!-- This adds a link to the Artists Spotify page so when the user clicks on their picture it take them to it. This has been done for all the artists -->
                   <a href="https://open.spotify.com/artist/246dkjvS1zLTtiykXe5h60">
                   <img src="images/music/post-malone.jpg" alt="Picture of Post Malone"></a>
                   <h3>2. Post Malone</h3>
@@ -164,7 +171,7 @@
                   <h3>3. NF</h3>
                 </div>
               </div>
-              <div class="person-container">
+              <div class="person-container"> <!-- I exit the div and create a new one to get another row in the next column to add more people so I have 3 people per row -->
                 <div class="person">
                   <a href="https://open.spotify.com/artist/31W5EY0aAly4Qieq6OFu6I">
                   <img src="images/music/a-boogie-wit-da-hoodie.jpg" alt="Picture of A Boogie Wit da Hoodie"></a>
@@ -181,7 +188,7 @@
                   <h3>6. blackbear</h3>
                 </div>
               </div>
-              <div class="person-container">
+              <div class="person-container"> <!-- Final time to create a new row that allows all the artist to fit that I wanted. -->
                 <div class="person">
                   <a href="https://open.spotify.com/artist/7naAJDAh7AZnf18YYfQruM">
                   <img src="images/music/christian-french.jpg" alt="Picture of Christian French"></a>
@@ -199,11 +206,12 @@
                 </div>
               </div>
             </div>
-
+            
+            <!-- This is the start of another column in the row which is for the genres-->
             <div class="music-table">
               <h2>Top Genres</h2>
-              <figure class="pie-chart">
-                <figcaption>
+              <figure class="pie-chart"> <!-- This is the pie chart that I have created using the data from my spotify stats -->
+                <figcaption> <!-- This is the key for the pie chart that shows what each colour represents -->
                   Pop<span style="color:#4e79a7"></span><br>
                   Rap<span style="color:#f28e2c"></span><br>
                   Melodic Rap<span style="color:#e15759"></span><br>
@@ -220,7 +228,7 @@
           </div>
         </div>
 
-
+        <!-- This is the footer that is on every page -->
         <footer>
         <p>Author: Ladish</p>
       </footer>
