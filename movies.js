@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function fetchMoviesData() {
     return new Promise((resolve, reject) => {
-      fetch("/Movie-Data/")
+      fetch("Movie-Data/")
         .then((response) => response.text())
         .then((html) => {
           const parser = new DOMParser();
