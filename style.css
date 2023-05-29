@@ -1,13 +1,18 @@
+/*                                                                                            GENERAL CSS       */
+
+/* Style of the whole site html and body */
 html, body {
   text-align: center;
   height: 100%;
 }
 
+/* Style of heading 1 across the whole site */
 h1 {
     text-align: center;
     text-decoration: underline;
 }
 
+/* Style of heading 3 across the whole site */
 h3 {
     text-align: center;
     text-decoration: underline;
@@ -20,11 +25,48 @@ h3 {
   background: white;
 }
 
+/* Style the headings on the header */
 .header h1 {
   font-size: 50px;
 }
 
-/* Style the top navigation bar */
+/* Style of the tables being used mainly for the music and movie pages */
+table {
+  width: 80%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+
+/* Style the table headers */
+th, td {
+  text-align: left;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+}
+
+/* Style the table rows */
+th {
+  background-color: #FDDF95;
+}
+
+/* Style the footer on each page */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto;
+}
+
+/* For the movie page to keep the page of the table they are on highlighted & selected */
+.active-page {
+  background-color: #333;
+  color: #fff;
+}
+
+/*                                                                                             Style the top navigation bar          */
 .topnav {
   overflow: hidden;
   background-color: #333;
@@ -48,6 +90,10 @@ h3 {
   color: black;
 }
 
+
+/*                                                                                              Style Boxes for mutiple pages        */
+
+/* Game Page Boxes */
 .row {
   width: 100%;
   text-align: center;
@@ -66,6 +112,7 @@ h3 {
   position: relative;
 }
 
+/* Style the images in the boxes */
 .columns img {
   width: 200px;
   height: 300px;
@@ -74,6 +121,7 @@ h3 {
   border-radius: 10px 0px 0px 10px;
 }
 
+/* Style the links of text in the boxes */
 .columns a {
   position: absolute;
   bottom: 10px;
@@ -81,47 +129,16 @@ h3 {
   right: 0; /* Added to stretch the anchor element */
 }
 
+/* Style the heading 2 in the boxes */
 .columns h2 {
   margin-bottom: 20px;
   text-decoration: underline;
 }
 
-  .align-right {
-    text-align: right;
-  }
+/*  Home Page Boxes   */
 
-  a.fill-div {
-    display: block;
-    height: 100%;
-    width: 100%;
-    text-decoration: none;
-}
-
-  @media screen and (max-width: 680px) {
-    .columns {
-      width: 100%; 
-    }
-
-  }
-
-  table {
-    width: 80%;
-    table-layout: fixed;
-    border-collapse: collapse;
-    margin: 0 auto;
-  }
-  
-  th, td {
-    text-align: left;
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-  }
-
-  th {
-    background-color: #FDDF95;
-  }
-
-  .columns-home-main {
+/* Custom boxes for the home page */
+.columns-home-main {
     width: 33%;
     min-width: 280px;
     vertical-align: top;
@@ -134,17 +151,20 @@ h3 {
     position: relative;
   }
 
+  /* Style the of the heading 2 on the homepage in the boxes*/
   .columns-home h2 {
     margin-bottom: 20px;
     text-decoration: underline;
   }
 
+  /* Setup a row on the homepage */
   .homepage-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
   
+  /* Setup the columns on the homepage */
   .homepage-columns {
     width: 33%;
     min-width: 280px;
@@ -168,11 +188,13 @@ h3 {
     text-align: center;
   }
   
+  /* Style the heading 2 on the homepage in the boxes */
   .homepage-columns h2 {
     margin-bottom: 20px;
     text-decoration: underline;
   }
   
+  /* Setup image container for the homepage */
   .image-container {
     width: 100%;
     height: 300px; /* Adjust the height as needed */
@@ -182,6 +204,7 @@ h3 {
     overflow: hidden;
   }
   
+  /* Style the images on the homepage that are in the image container */
   .image-container img {
     max-width: 100%;
     max-height: 100%;
@@ -189,17 +212,8 @@ h3 {
     border: 3px solid #000000;
     border-radius: 10px;
   }
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    margin-top: auto;
-  }
 
-
-  /*                                Music Page Css for the songs                    */
+  /* Music Page Boxes for songs and genres */
 
   .music-table-container {
     display: flex;
@@ -246,13 +260,14 @@ h3 {
     color: black;
   }
 
+  /* Style the first column of the table to make it a decent size for the values that are in it */
   .music-table table th:first-child,
   .music-table table td:first-child {
     width: 10%;
     max-width: 50px;
   }
 
-  /*                              Music Page Css for the Artists                */
+  /* Music page boxes for artists */
 
   .person-container {
     padding-top: 20px;
@@ -288,12 +303,12 @@ h3 {
   }
 
 
-/*                                         Pie Chart Css              */
+/*                                                                                                                               Pie Chart Css              */
 
 
   .pie-chart {
     background:
-      radial-gradient(
+      radial-gradient( /* Gradient for the inside and outside of the pie chart */
         circle closest-side,
         #3d3c3c 0,
         #3d3c3c 69%,
@@ -301,7 +316,7 @@ h3 {
         transparent 100%,
         #3d3c3c 0
       ),
-      conic-gradient(
+      conic-gradient( /* Gradient for the pie chart items and the percentages for each section to get the correct data */
         #4e79a7 0,
         #4e79a7 31.8%,
         #f28e2c 0,
